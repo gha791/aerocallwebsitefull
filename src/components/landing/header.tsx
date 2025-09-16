@@ -27,8 +27,8 @@ export function Header() {
             ))}
           </nav>
           <div className="flex items-center gap-2">
-              <Button variant="outline" asChild className="hidden md:flex"><Link href="/login">Log In</Link></Button>
               <Button asChild><Link href="/signup">Get Started</Link></Button>
+              <Button variant="outline" asChild className="hidden md:flex"><Link href="/login">Log In</Link></Button>
               <Sheet open={isOpen} onOpenChange={setIsOpen}>
                 <SheetTrigger asChild>
                     <Button variant="outline" size="icon" className="md:hidden">
