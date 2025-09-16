@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
@@ -13,14 +14,14 @@ export function Hero() {
         </Badge>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter">
           The Future of Business
-          <br />
+          <br className="hidden sm:block" />
           Communication is{' '}
           <span className="text-accent">Crystal Clear</span>
         </h1>
         <p className="max-w-[700px] mx-auto text-muted-foreground md:text-xl mt-6">
             Modern cloud calling for ambitious teams. Simple setup, powerful features, and unparalleled reliability. Welcome to AEROCALL.
         </p>
-        <div className="flex justify-center gap-4 mt-8">
+        <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
             <Button size="lg" asChild><Link href="/signup">Start Free Trial</Link></Button>
             <Button size="lg" variant="outline" asChild><Link href="#"><PlayCircle className="mr-2" />Watch Demo</Link></Button>
         </div>

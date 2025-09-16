@@ -1,5 +1,6 @@
+
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { placeholderImages } from "@/lib/placeholder-images";
 import { Briefcase, Heart, Lightbulb, Users } from "lucide-react";
 import Image from "next/image";
@@ -72,7 +73,7 @@ export default function AboutPage() {
                         {values.map((value, index) => {
                             const Icon = value.icon;
                             return (
-                                <Card key={index} className="bg-card text-center items-center flex flex-col p-4">
+                                <Card key={index} className="bg-card text-center items-center flex flex-col p-6">
                                      <div className="bg-primary text-primary-foreground p-3 rounded-lg w-fit mb-4">
                                         <Icon className="h-6 w-6" />
                                     </div>
