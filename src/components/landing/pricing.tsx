@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Check } from "lucide-react";
+import { Check, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 const pricingTiers = [
@@ -11,11 +11,13 @@ const pricingTiers = [
         description: "Perfect for small teams and startups getting started.",
         features: [
             "Up to 5 Users",
-            "1 Local Number"
+            "1 Local Number",
+            "HD Voice Quality",
+            "Call Forwarding",
+            "Basic Analytics"
         ],
-        buttonText: "Get Started",
+        buttonText: "Choose Plan",
         buttonLink: "/signup",
-        variant: "outline"
     },
     {
         name: "Business",
@@ -24,11 +26,14 @@ const pricingTiers = [
         description: "Ideal for growing businesses that need more power and flexibility.",
         features: [
             "Up to 25 Users",
-            "5 Local Numbers"
+            "5 Local Numbers",
+            "Conference Calling",
+            "Advanced Analytics",
+            "CRM Integration",
+            "24/7 Support"
         ],
-        buttonText: "Get Started",
+        buttonText: "Choose Plan",
         buttonLink: "/signup",
-        variant: "default",
         isPopular: true
     },
     {
@@ -38,11 +43,14 @@ const pricingTiers = [
         description: "Tailored solutions for large organizations with specific needs.",
         features: [
             "Unlimited Users",
-            "Custom Number Blocks"
+            "Custom Number Blocks",
+            "Dedicated Account Manager",
+            "Enterprise-grade Security",
+            "Custom Integrations",
+            "SLA & Priority Support"
         ],
         buttonText: "Contact Sales",
         buttonLink: "/contact",
-        variant: "outline"
     }
 ]
 
@@ -61,7 +69,7 @@ export function Pricing() {
                 </p>
             </div>
 
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 items-center max-w-5xl mx-auto">
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 items-stretch max-w-5xl mx-auto">
                 {pricingTiers.map((tier) => (
                     <Card key={tier.name} className={`flex flex-col h-full ${tier.isPopular ? "border-primary ring-2 ring-primary shadow-lg" : "shadow-md"}`}>
                         <CardHeader className="text-left">
@@ -84,7 +92,10 @@ export function Pricing() {
                         </CardContent>
                         <CardFooter>
                             <Button asChild className="w-full" variant={tier.isPopular ? "default" : "outline"}>
-                                <Link href={tier.buttonLink}>{tier.buttonText}</Link>
+                                <Link href={tier.buttonLink}>
+                                    {tier.buttonText}
+                                    <ArrowRight className="ml-2 h-4 w-4" />
+                                </Link>
                             </Button>
                         </CardFooter>
                     </Card>
