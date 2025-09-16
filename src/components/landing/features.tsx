@@ -4,7 +4,7 @@ import { featuresData } from "@/lib/data";
 export function Features() {
   return (
     <section id="features" className="py-12 md:py-24 lg:py-32 bg-secondary">
-      <div className="container mx-auto">
+      <div className="container mx-auto animate-fade-in-up">
         <div className="text-center space-y-4 mb-12">
           <h2 className="text-3xl md:text-4xl font-bold">Powerful Features, Simple Interface</h2>
           <p className="text-muted-foreground md:text-lg max-w-2xl mx-auto">
@@ -15,7 +15,7 @@ export function Features() {
           {featuresData.map((feature, index) => {
             const Icon = feature.icon;
             return (
-              <Card key={index} className="hover:shadow-lg transition-shadow bg-card">
+              <Card key={index} className="hover:shadow-lg transition-shadow bg-card" style={{ animationDelay: `${index * 150}ms` }}>
                 <CardHeader>
                   <div className="bg-accent p-3 rounded-lg w-fit mb-4">
                     <Icon className="h-6 w-6 text-accent-foreground" />

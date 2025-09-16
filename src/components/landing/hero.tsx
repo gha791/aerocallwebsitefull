@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export function Hero() {
   return (
-    <section className="py-12 md:py-24 lg:py-32">
+    <section className="py-12 md:py-24 lg:py-32 animate-fade-in-up">
       <div className="container mx-auto grid md:grid-cols-2 gap-8 items-center">
         <div className="space-y-4">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter">The Future of Business Communication</h1>
