@@ -14,6 +14,12 @@
       "imageHint": "call center"
     },
     {
+      "id": "team-photo",
+      "description": "A diverse group of professionals in a modern office setting.",
+      "imageUrl": "https://picsum.photos/seed/team-office/1200/600",
+      "imageHint": "office team"
+    },
+    {
       "id": "user-avatar-1",
       "description": "User avatar",
       "imageUrl": "https://picsum.photos/seed/100/40/40",
