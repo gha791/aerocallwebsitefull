@@ -53,7 +53,18 @@ export default function ContactPage() {
                 </div>
                  <div className="space-y-2 md:col-span-2">
                   <Label htmlFor="callback-number">Callback number*</Label>
-                  <Input id="callback-number" placeholder="000 000 0000" />
+                  <div className="flex items-center gap-2">
+                    <Select defaultValue="US">
+                        <SelectTrigger className="w-[120px]">
+                            <SelectValue placeholder="Country" />
+                        </SelectTrigger>
+                        <SelectContent>
+                            <SelectItem value="US">🇺🇸 +1</SelectItem>
+                            <SelectItem value="CA">🇨🇦 +1</SelectItem>
+                        </SelectContent>
+                    </Select>
+                    <Input id="callback-number" placeholder="000 000 0000" />
+                  </div>
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="company-name">Company name*</Label>
