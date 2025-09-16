@@ -4,8 +4,14 @@
     {
       "id": "hero-image",
       "description": "Abstract image representing modern business communication",
-      "imageUrl": "https://picsum.photos/seed/technology/1200/675",
+      "imageUrl": "https://picsum.photos/seed/communication/1200/675",
       "imageHint": "cloud communication"
+    },
+    {
+      "id": "how-it-works-image",
+      "description": "An illustration showing the process of setting up a business phone system.",
+      "imageUrl": "https://picsum.photos/seed/setup/600/400",
+      "imageHint": "business communication setup"
     },
     {
       "id": "user-avatar-1",
