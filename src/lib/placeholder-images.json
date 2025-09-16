@@ -3,15 +3,15 @@
   "placeholderImages": [
     {
       "id": "hero-image",
-      "description": "Abstract image representing modern business communication",
-      "imageUrl": "https://picsum.photos/seed/communication/1200/675",
-      "imageHint": "cloud communication"
+      "description": "A modern office environment with people collaborating.",
+      "imageUrl": "https://picsum.photos/seed/office/1200/675",
+      "imageHint": "modern office"
     },
     {
       "id": "how-it-works-image",
-      "description": "An illustration showing the process of setting up a business phone system.",
-      "imageUrl": "https://picsum.photos/seed/setup/600/400",
-      "imageHint": "business communication setup"
+      "description": "A person working at a call center with a headset.",
+      "imageUrl": "https://picsum.photos/seed/call-center/600/400",
+      "imageHint": "call center"
     },
     {
       "id": "user-avatar-1",
