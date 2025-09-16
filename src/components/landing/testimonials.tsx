@@ -1,30 +1,31 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { placeholderImages } from "@/lib/placeholder-images";
 
 const testimonials = [
     {
         name: "Sarah L.",
         role: "CEO, Tech startup",
-        avatar: "https://picsum.photos/seed/1/40/40",
+        avatarId: "user-avatar-1",
         testimonial: "AEROCALL has revolutionized our team's communication. The platform is intuitive, reliable, and has features that we now can't live without. Highly recommended!"
     },
     {
         name: "Michael B.",
         role: "Project Manager, Creative Agency",
-        avatar: "https://picsum.photos/seed/2/40/40",
+        avatarId: "user-avatar-2",
         testimonial: "The call forwarding and IVR features are game-changers for our remote team. It's like having a full-fledged office phone system, but completely flexible."
     },
     {
         name: "Jessica P.",
         role: "Owner, Small Business",
-        avatar: "https://picsum.photos/seed/3/40/40",
+        avatarId: "user-avatar-3",
         testimonial: "Switching to AEROCALL was seamless. We kept our old number and gained so much functionality. Customer support was incredibly helpful during the process."
     },
     {
         name: "David H.",
         role: "IT Director, Enterprise",
-        avatar: "https://picsum.photos/seed/4/40/40",
+        avatarId: "user-avatar-4",
         testimonial: "As an IT Director, I appreciate the security and multi-platform support. It's easy to manage users and the service is rock-solid. A great enterprise solution."
     },
 ]
@@ -47,7 +48,9 @@ export function Testimonials() {
             className="w-full max-w-4xl mx-auto"
         >
             <CarouselContent>
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map((testimonial, index) => {
+                const avatar = placeholderImages.find(p => p.id === testimonial.avatarId);
+                return (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                     <div className="p-1 h-full">
                         <Card className="h-full">
@@ -55,7 +58,7 @@ export function Testimonials() {
                                 <p className="text-muted-foreground italic mb-6">"{testimonial.testimonial}"</p>
                                 <div className="flex items-center gap-4">
                                     <Avatar>
-                                        <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
+                                        {avatar && <AvatarImage src={avatar.imageUrl} alt={avatar.description} data-ai-hint={avatar.imageHint} />}
                                         <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
                                     </Avatar>
                                     <div>
@@ -67,7 +70,7 @@ export function Testimonials() {
                         </Card>
                     </div>
                 </CarouselItem>
-            ))}
+            )})}
             </CarouselContent>
             <CarouselPrevious />
             <CarouselNext />

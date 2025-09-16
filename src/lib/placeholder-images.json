@@ -1,6 +1,12 @@
 {
   "placeholderImages": [
     {
+      "id": "hero-image",
+      "description": "Abstract image representing communication",
+      "imageUrl": "https://picsum.photos/seed/hero/1200/675",
+      "imageHint": "communication abstract"
+    },
+    {
       "id": "user-avatar-1",
       "description": "User avatar",
       "imageUrl": "https://picsum.photos/seed/100/40/40",
