@@ -1,5 +1,7 @@
 
+
 import { Star } from "lucide-react";
+import { Card } from "@/components/ui/card";
 
 const awards = [
     { title: "Best Software 2025", text: "Top 100", subtext: "Highest Satisfaction Products", color: "black" },
