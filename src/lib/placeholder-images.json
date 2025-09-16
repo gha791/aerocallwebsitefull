@@ -3,9 +3,9 @@
   "placeholderImages": [
     {
       "id": "hero-image",
-      "description": "A modern office environment with people collaborating.",
-      "imageUrl": "https://picsum.photos/seed/office/1200/675",
-      "imageHint": "modern office"
+      "description": "A group of colleagues collaborating in a modern workspace.",
+      "imageUrl": "https://storage.googleapis.com/project-os-frontend/images/66a394a28f87790008434316.jpeg",
+      "imageHint": "team collaboration"
     },
     {
       "id": "how-it-works-image",
