@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
+import { Header } from '@/components/landing/header';
+import { Footer } from '@/components/landing/footer';
 
 export const metadata: Metadata = {
   title: 'Connectify',
@@ -22,8 +24,10 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="font-body antialiased">
+      <body className="font-body antialiased bg-background text-foreground">
+        <Header />
         {children}
+        <Footer />
         <Toaster />
       </body>
     </html>
