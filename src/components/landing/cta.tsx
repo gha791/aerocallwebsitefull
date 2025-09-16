@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
@@ -10,7 +11,7 @@ export function Cta() {
           Join thousands of businesses who trust AEROCALL for their daily operations.
         </p>
         <div className="mt-8">
-          <Button size="lg" asChild><Link href="/signup">Sign Up for Free</Link></Button>
+          <Button size="lg" asChild><Link href="/contact">Sign Up for Free</Link></Button>
         </div>
       </div>
     </section>

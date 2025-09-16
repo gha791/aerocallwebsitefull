@@ -22,7 +22,7 @@ export function Hero() {
             Modern cloud calling for ambitious teams. Simple setup, powerful features, and unparalleled reliability. Welcome to AEROCALL.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
-            <Button size="lg" asChild><Link href="/signup">Start Free Trial</Link></Button>
+            <Button size="lg" asChild><Link href="/contact">Start Free Trial</Link></Button>
             <Button size="lg" variant="outline" asChild><Link href="#"><PlayCircle className="mr-2" />Watch Demo</Link></Button>
         </div>
       </div>

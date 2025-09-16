@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check, ArrowRight } from "lucide-react";
@@ -17,7 +18,7 @@ const pricingTiers = [
             "Basic Analytics"
         ],
         buttonText: "Choose Plan",
-        buttonLink: "/signup",
+        buttonLink: "/contact",
     },
     {
         name: "Business",
@@ -33,7 +34,7 @@ const pricingTiers = [
             "24/7 Support"
         ],
         buttonText: "Choose Plan",
-        buttonLink: "/signup",
+        buttonLink: "/contact",
         isPopular: true
     },
     {
