@@ -1,9 +1,10 @@
+
 {
   "placeholderImages": [
     {
       "id": "hero-image",
       "description": "Abstract image representing communication",
-      "imageUrl": "https://picsum.photos/seed/hero/1200/675",
+      "imageUrl": "https://picsum.photos/seed/connect/1200/675",
       "imageHint": "communication abstract"
     },
     {
