@@ -1,29 +1,29 @@
-import Image from 'next/image';
 import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
+import { PlayCircle, Globe } from 'lucide-react';
 
 export function Hero() {
   return (
-    <section className="py-12 md:py-24 lg:py-32 animate-fade-in-up">
-      <div className="container mx-auto grid md:grid-cols-2 gap-8 items-center">
-        <div className="space-y-4">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter">The Future of Business Communication</h1>
-          <p className="max-w-[600px] text-muted-foreground md:text-xl">
-            Connectify provides a seamless, unified communication platform to keep your business connected, no matter where you are.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" asChild><Link href="/signup">Get Started</Link></Button>
-            <Button size="lg" variant="outline" asChild><Link href="/#features">Learn More</Link></Button>
-          </div>
+    <section className="py-20 md:py-32 lg:py-40 text-center animate-fade-in-up">
+      <div className="container mx-auto">
+        <Badge variant="secondary" className="py-2 px-4 rounded-full mb-4">
+            <Globe className='mr-2 h-4 w-4' />
+            Serving USA & Canada with Seamless Connections
+        </Badge>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter">
+          The Future of Business
+          <br />
+          Communication is{' '}
+          <span className="text-accent">Crystal Clear</span>
+        </h1>
+        <p className="max-w-[700px] mx-auto text-muted-foreground md:text-xl mt-6">
+            Modern cloud calling for ambitious teams. Simple setup, powerful features, and unparalleled reliability. Welcome to Connectify.
+        </p>
+        <div className="flex justify-center gap-4 mt-8">
+            <Button size="lg" asChild><Link href="/signup">Start Free Trial</Link></Button>
+            <Button size="lg" variant="outline" asChild><Link href="#"><PlayCircle className="mr-2" />Watch Demo</Link></Button>
         </div>
-        <Image
-          src="https://picsum.photos/seed/hero/600/400"
-          alt="Hero Image"
-          width={600}
-          height={400}
-          className="rounded-xl shadow-2xl"
-          data-ai-hint="communication technology"
-        />
       </div>
     </section>
   );
