@@ -6,6 +6,7 @@ import { Testimonials } from '@/components/landing/testimonials';
 import { Cta } from '@/components/landing/cta';
 import { HeroImage } from '@/components/landing/hero-image';
 import { TrustedBy } from '@/components/landing/trusted-by';
+import { Pricing } from '@/components/landing/pricing';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <TrustedBy />
       <Features />
       <HowItWorks />
+      <Pricing />
       <WhyConnectify />
       <Testimonials />
       <Cta />
