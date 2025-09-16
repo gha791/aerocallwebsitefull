@@ -3,9 +3,9 @@
   "placeholderImages": [
     {
       "id": "hero-image",
-      "description": "Abstract image representing communication",
-      "imageUrl": "https://picsum.photos/seed/connect/1200/675",
-      "imageHint": "communication abstract"
+      "description": "Abstract image representing modern business communication",
+      "imageUrl": "https://picsum.photos/seed/technology/1200/675",
+      "imageHint": "cloud communication"
     },
     {
       "id": "user-avatar-1",
