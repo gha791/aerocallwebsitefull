@@ -1,4 +1,5 @@
 import { Logo } from "@/components/logo";
+import Link from "next/link";
 
 export function Footer() {
   return (
@@ -7,8 +8,8 @@ export function Footer() {
         <Logo />
         <p className="text-sm text-muted-foreground">&copy; 2024 Connectify. All rights reserved.</p>
         <div className="flex gap-4">
-          <a href="#" className="text-sm hover:underline underline-offset-4">Privacy Policy</a>
-          <a href="#" className="text-sm hover:underline underline-offset-4">Terms of Service</a>
+          <Link href="/privacy" className="text-sm hover:underline underline-offset-4">Privacy Policy</Link>
+          <Link href="/terms" className="text-sm hover:underline underline-offset-4">Terms of Service</Link>
         </div>
       </div>
     </footer>

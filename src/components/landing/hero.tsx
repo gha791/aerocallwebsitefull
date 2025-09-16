@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 export function Hero() {
   return (
@@ -11,8 +12,8 @@ export function Hero() {
             Connectify provides a seamless, unified communication platform to keep your business connected, no matter where you are.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg">Get Started</Button>
-            <Button size="lg" variant="outline">Learn More</Button>
+            <Button size="lg" asChild><Link href="/signup">Get Started</Link></Button>
+            <Button size="lg" variant="outline" asChild><Link href="/#features">Learn More</Link></Button>
           </div>
         </div>
         <Image
