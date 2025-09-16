@@ -1,24 +1,44 @@
-import { PhoneForwarded, BringToFront, Network, Laptop } from 'lucide-react';
+import { Phone, Users, BarChart, Shield, Zap, Globe, Headphones, Settings } from 'lucide-react';
 
 export const featuresData = [
   {
-    title: 'Call Forwarding',
-    description: 'Never miss a call. Forward incoming calls to any device, anywhere in the world. Stay connected on your terms.',
-    icon: PhoneForwarded,
+    title: 'Crystal Clear Calls',
+    description: 'HD voice quality with advanced noise cancellation for professional conversations.',
+    icon: Phone,
   },
   {
-    title: 'Number Porting',
-    description: 'Keep your existing business number. Our seamless porting process makes switching to Connectify a breeze.',
-    icon: BringToFront,
+    title: 'Team Collaboration',
+    description: 'Seamless team communication with conference calls, call transfer, and shared contacts.',
+    icon: Users,
   },
   {
-    title: 'Interactive Voice Response (IVR)',
-    description: 'Guide callers to the right department with a professional, automated menu system. Improve efficiency and customer experience.',
-    icon: Network,
+    title: 'Analytics & Insights',
+    description: 'Detailed call analytics and reporting to optimize your business communications.',
+    icon: BarChart,
   },
   {
-    title: 'Multi-Platform Support',
-    description: 'Access Connectify on desktop, web, and mobile. Your business communications, synchronized across all your devices.',
-    icon: Laptop,
+    title: 'Enterprise Security',
+    description: 'Bank-level encryption and security protocols to protect your business calls.',
+    icon: Shield,
+  },
+  {
+    title: 'Lightning Fast Setup',
+    description: 'Get your team connected in minutes with our simple onboarding process.',
+    icon: Zap,
+  },
+  {
+    title: 'USA & Canada Coverage',
+    description: 'Complete coverage across United States and Canada with local number options.',
+    icon: Globe,
+  },
+  {
+    title: '24/7 Support',
+    description: 'Round-the-clock customer support to keep your business communications running.',
+    icon: Headphones,
+  },
+  {
+    title: 'Easy Management',
+    description: 'Intuitive admin panel to manage users, settings, and billing from one place.',
+    icon: Settings,
   }
 ];

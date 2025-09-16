@@ -15,8 +15,8 @@ export function Features() {
           {featuresData.map((feature, index) => {
             const Icon = feature.icon;
             return (
-              <Card key={index} className="hover:shadow-lg transition-shadow bg-card" style={{ animationDelay: `${index * 150}ms` }}>
-                <CardHeader>
+              <Card key={index} className="hover:shadow-lg transition-shadow bg-card text-center items-center flex flex-col" style={{ animationDelay: `${index * 150}ms` }}>
+                <CardHeader className="items-center">
                   <div className="bg-accent p-3 rounded-lg w-fit mb-4">
                     <Icon className="h-6 w-6 text-accent-foreground" />
                   </div>
