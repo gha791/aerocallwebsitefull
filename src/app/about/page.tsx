@@ -3,9 +3,9 @@ export default function AboutPage() {
       <main className="flex-1 py-12 md:py-24 lg:py-32">
         <div className="container mx-auto px-4 md:px-6">
           <div className="prose max-w-4xl mx-auto">
-            <h1>About Connectify</h1>
+            <h1>About AEROCALL</h1>
             <p>
-              Connectify is revolutionizing business communication with its powerful, AI-driven cloud calling platform. 
+              AEROCALL is revolutionizing business communication with its powerful, AI-driven cloud calling platform. 
               Our mission is to provide small and mid-sized businesses in the USA and Canada with a seamless, 
               unified communication solution that is both affordable and easy to use.
             </p>
@@ -24,7 +24,7 @@ export default function AboutPage() {
   
             <h2>Why Choose Us?</h2>
             <p>
-              At Connectify, we're more than just a service provider; we're your partner in growth. 
+              At AEROCALL, we're more than just a service provider; we're your partner in growth. 
               We are dedicated to providing exceptional service, transparent pricing, and a platform 
               that empowers your team to do their best work.
             </p>

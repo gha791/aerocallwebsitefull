@@ -7,7 +7,7 @@ const testimonials = [
         name: "Sarah L.",
         role: "CEO, Tech startup",
         avatar: "https://picsum.photos/seed/1/40/40",
-        testimonial: "Connectify has revolutionized our team's communication. The platform is intuitive, reliable, and has features that we now can't live without. Highly recommended!"
+        testimonial: "AEROCALL has revolutionized our team's communication. The platform is intuitive, reliable, and has features that we now can't live without. Highly recommended!"
     },
     {
         name: "Michael B.",
@@ -19,7 +19,7 @@ const testimonials = [
         name: "Jessica P.",
         role: "Owner, Small Business",
         avatar: "https://picsum.photos/seed/3/40/40",
-        testimonial: "Switching to Connectify was seamless. We kept our old number and gained so much functionality. Customer support was incredibly helpful during the process."
+        testimonial: "Switching to AEROCALL was seamless. We kept our old number and gained so much functionality. Customer support was incredibly helpful during the process."
     },
     {
         name: "David H.",
@@ -36,7 +36,7 @@ export function Testimonials() {
         <div className="text-center space-y-4 mb-12">
           <h2 className="text-3xl md:text-4xl font-bold">Loved by Teams Everywhere</h2>
           <p className="text-muted-foreground md:text-lg max-w-2xl mx-auto">
-            See what our customers are saying about how Connectify transformed their business.
+            See what our customers are saying about how AEROCALL transformed their business.
           </p>
         </div>
         <Carousel

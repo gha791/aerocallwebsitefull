@@ -10,7 +10,7 @@ const benefits = [
     {
         icon: Users,
         title: "Scales With You",
-        description: "From a one-person startup to a hundred-person team, Connectify grows with your business. Add lines and users in a few clicks."
+        description: "From a one-person startup to a hundred-person team, AEROCALL grows with your business. Add lines and users in a few clicks."
     },
     {
         icon: DollarSign,
@@ -24,7 +24,7 @@ export function WhyConnectify() {
         <section className="py-12 md:py-24 lg:py-32 bg-secondary">
             <div className="container mx-auto animate-fade-in-up">
                 <div className="text-center space-y-4 mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold">Why Choose Connectify?</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold">Why Choose AEROCALL?</h2>
                     <p className="text-muted-foreground md:text-lg max-w-2xl mx-auto">
                         Discover the advantages of a modern, AI-enhanced phone system.
                     </p>

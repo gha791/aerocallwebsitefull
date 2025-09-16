@@ -5,7 +5,7 @@ import { Header } from '@/components/landing/header';
 import { Footer } from '@/components/landing/footer';
 
 export const metadata: Metadata = {
-  title: 'Connectify',
+  title: 'AEROCALL',
   description: 'The future of business communication.',
 };
 
