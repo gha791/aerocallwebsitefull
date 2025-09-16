@@ -53,7 +53,7 @@ export function Footer() {
                 <h3 className="font-semibold mb-4">Quick Links</h3>
                 <ul className="space-y-2">
                     {quickLinks.map((link) => (
-                        <li key={link.href}>
+                        <li key={`${link.href}-${link.label}`}>
                             <Link href={link.href} className="text-sm text-muted-foreground hover:underline underline-offset-4">
                                 {link.label}
                             </Link>
