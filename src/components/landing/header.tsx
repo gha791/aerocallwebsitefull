@@ -27,6 +27,7 @@ export function Header() {
             ))}
           </nav>
           <div className="flex items-center gap-2">
+              <Button variant="outline" asChild className="hidden md:flex"><Link href="/login">Log In</Link></Button>
               <Button asChild><Link href="/signup">Get Started</Link></Button>
               <Sheet open={isOpen} onOpenChange={setIsOpen}>
                 <SheetTrigger asChild>
@@ -49,6 +50,13 @@ export function Header() {
                                     {link.label}
                                 </Link>
                             ))}
+                             <Link
+                                href="/login"
+                                className="text-lg font-medium hover:underline underline-offset-4"
+                                onClick={() => setIsOpen(false)}
+                            >
+                                Log In
+                            </Link>
                         </nav>
                     </div>
                 </SheetContent>
