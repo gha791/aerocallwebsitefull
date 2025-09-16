@@ -1,4 +1,5 @@
 
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -7,6 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Textarea } from "@/components/ui/textarea";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import Link from "next/link";
+import { ContactRatings } from "@/components/landing/contact-ratings";
 
 const benefits = [
     "Evaluate AEROCALL for your organization",
@@ -113,6 +115,7 @@ export default function ContactPage() {
           </Card>
         </div>
       </div>
+      <ContactRatings />
     </main>
   );
 }
