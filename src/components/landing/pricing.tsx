@@ -26,8 +26,8 @@ const pricingTiers = [
         priceSuffix: "/user/month",
         description: "Ideal for growing businesses that need more power and flexibility.",
         features: [
-            "Up to 25 Users",
-            "5 Local Numbers",
+            "Up to 10 Users",
+            "2 Local Numbers",
             "Conference Calling",
             "Advanced Analytics",
             "CRM Integration",

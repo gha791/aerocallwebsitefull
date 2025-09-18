@@ -44,7 +44,7 @@ Here is some information about AEROCALL:
 - Target Audience: Small to mid-sized businesses, from solo entrepreneurs to growing teams in the USA and Canada.
 - Pricing:
   - Starter: $20/user/month. Good for up to 5 users.
-  - Business: $35/user/month. The most popular plan, for up to 25 users. Includes advanced features like conference calling and CRM integration.
+  - Business: $35/user/month. The most popular plan, for up to 10 users. Includes advanced features like conference calling and CRM integration.
   - Enterprise: Custom pricing for unlimited users with dedicated support.
 
 Based on the user's message and the conversation history, provide a helpful response.
