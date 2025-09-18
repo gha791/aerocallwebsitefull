@@ -3,6 +3,7 @@ import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { Header } from '@/components/landing/header';
 import { Footer } from '@/components/landing/footer';
+import { ChatWidget } from '@/components/chatbot/chat-widget';
 
 export const metadata: Metadata = {
   title: 'AEROCALL',
@@ -32,6 +33,7 @@ export default function RootLayout({
           </div>
           <Footer />
         </div>
+        <ChatWidget />
         <Toaster />
       </body>
     </html>
