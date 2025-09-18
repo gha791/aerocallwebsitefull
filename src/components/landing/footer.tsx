@@ -87,13 +87,13 @@ export function Footer() {
                     </li>
                     <li className="flex items-center gap-3">
                         <Mail className="h-5 w-5 text-muted-foreground" />
-                        <a href="mailto:hello@aerocall.com" className="text-muted-foreground hover:text-foreground">hello@aerocall.com</a>
+                        <a href="mailto:hello@aerocall.net" className="text-muted-foreground hover:text-foreground">hello@aerocall.net</a>
                     </li>
                     <li className="flex items-start gap-3">
                         <MapPin className="h-5 w-5 text-muted-foreground mt-1" />
                         <p className="text-muted-foreground">
-                            123 Business Ave<br/>
-                            Suite 100, New York, NY 10001
+                            8206 LOUSISIANA BLVD NE<br/>
+                            STE A ALBUQUERQUE, NM 87113
                         </p>
                     </li>
                 </ul>

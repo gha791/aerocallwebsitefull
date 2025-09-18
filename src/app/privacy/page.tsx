@@ -13,7 +13,7 @@ export default function PrivacyPolicyPage() {
               Remember that your use of AEROCALL&apos;s Services is at all times subject to our Terms of Service which incorporates this Privacy Policy. Any terms we use in this Policy without defining them have the definitions given to them in the Terms of Use.
             </p>
             <p>
-              If you have a disability, you may access this Privacy Policy in an alternative format by contacting hello@aerocall.com.
+              If you have a disability, you may access this Privacy Policy in an alternative format by contacting hello@aerocall.net.
             </p>
 
             <h2>1. What this Privacy Policy covers</h2>
@@ -282,19 +282,19 @@ export default function PrivacyPolicyPage() {
             <p>We retain Personal Data about you for as long as you have an open account with us or as otherwise necessary to provide you with our Services. In some cases we retain Personal Data for longer, if doing so is necessary to comply with our legal obligations, resolve disputes or collect fees owed, or is otherwise permitted or required by applicable law, rule or regulation. We may further retain information in an anonymous or aggregated form where that information would not identify you personally.</p>
 
             <h2>12. Personal Data of Children</h2>
-            <p>As noted in the Terms of Use, we do not knowingly collect or solicit Personal Data about children under 16 years of age; if you are a child under the age of 16, please do not attempt to register for or otherwise use the Services or send us any Personal Data. If we learn we have collected Personal Data from a child under 16 years of age, we will delete that information as quickly as possible. If you believe that a child under 16 years of age may have provided Personal Data to us, please contact us at hello@aerocall.com.</p>
+            <p>As noted in the Terms of Use, we do not knowingly collect or solicit Personal Data about children under 16 years of age; if you are a child under the age of 16, please do not attempt to register for or otherwise use the Services or send us any Personal Data. If we learn we have collected Personal Data from a child under 16 years of age, we will delete that information as quickly as possible. If you believe that a child under 16 years of age may have provided Personal Data to us, please contact us at hello@aerocall.net.</p>
 
             <h2>13. State Law Privacy Rights</h2>
             <h3>California Resident Rights</h3>
-            <p>Under California Civil Code Sections 1798.83-1798.84, California residents are entitled to contact us to prevent disclosure of Personal Data to third parties for such third parties’ direct marketing purposes; in order to submit such a request, please contact us at hello@aerocall.com.</p>
+            <p>Under California Civil Code Sections 1798.83-1798.84, California residents are entitled to contact us to prevent disclosure of Personal Data to third parties for such third parties’ direct marketing purposes; in order to submit such a request, please contact us at hello@aerocall.net.</p>
             <h3>Nevada Resident Rights</h3>
-            <p>If you are a resident of Nevada, you have the right to opt-out of the sale of certain Personal Data to third parties. You can exercise this right by contacting us at hello@aerocall.com with the subject line “Nevada Do Not Sell Request” and providing us with your name and the email address associated with your account. Please note that we do not currently sell your Personal Data as sales are defined in Nevada Revised Statutes Chapter 603A.</p>
+            <p>If you are a resident of Nevada, you have the right to opt-out of the sale of certain Personal Data to third parties. You can exercise this right by contacting us at hello@aerocall.net with the subject line “Nevada Do Not Sell Request” and providing us with your name and the email address associated with your account. Please note that we do not currently sell your Personal Data as sales are defined in Nevada Revised Statutes Chapter 603A.</p>
 
             <h2>14. European Union and United Kingdom Data Subject Rights</h2>
             <h3>EU and UK Residents</h3>
             <p>If you are a resident of the European Union (“EU”), United Kingdom (“UK”), Lichtenstein, Norway or Iceland, you may have additional rights under the EU or UK General Data Protection Regulation (the “GDPR”) with respect to your Personal Data, as outlined below.</p>
             <p>For this section, we use the terms “Personal Data” and “processing” as they are defined in the GDPR, but “Personal Data” generally means information that can be used to individually identify a person, and “processing” generally covers actions that can be performed in connection with data such as collection, use, storage, and disclosure. AEROCALL will be the controller of your Personal Data processed in connection with the Services.</p>
-            <p>If there are any conflicts between this this section and any other provision of this Privacy Policy, the policy or portion that is more protective of Personal Data shall control to the extent of such conflict. If you have any questions about this section or whether any of the following applies to you, please contact us at hello@aerocall.com. Note that we may also process Personal Data of our customers’ end users or employees in connection with our provision of certain services to customers, in which case we are the processor of Personal Data. If we are the processor of your Personal Data (i.e., not the controller), please contact the controller party in the first instance to address your rights with respect to such data.</p>
+            <p>If there are any conflicts between this this section and any other provision of this Privacy Policy, the policy or portion that is more protective of Personal Data shall control to the extent of such conflict. If you have any questions about this section or whether any of the following applies to you, please contact us at hello@aerocall.net. Note that we may also process Personal Data of our customers’ end users or employees in connection with our provision of certain services to customers, in which case we are the processor of Personal Data. If we are the processor of your Personal Data (i.e., not the controller), please contact the controller party in the first instance to address your rights with respect to such data.</p>
             
             <h2>15. Personal Data We Collect</h2>
             <p>The “Categories of Personal Data We Collect” section above details the Personal Data that we collect from you.</p>
@@ -313,13 +313,13 @@ export default function PrivacyPolicyPage() {
             <p>The “How We Share Your Personal Data” section above details how we share your Personal Data with third parties.</p>
 
             <h2>18. Delete Personal Data</h2>
-            <p>You can request that we erase some or all of your Personal Data from our systems. To do so, please contact us at hello@aerocall.com.</p>
+            <p>You can request that we erase some or all of your Personal Data from our systems. To do so, please contact us at hello@aerocall.net.</p>
             
             <h2>19. EU, UK, and Swiss Data Subject Rights</h2>
-            <p>You have certain rights with respect to your Personal Data, including those set forth below. For more information about these rights, or to submit a request, please email us at hello@aerocall.com. Please note that in some circumstances, we may not be able to fully comply with your request, such as if it is frivolous or extremely impractical, if it jeopardizes the rights of others, or if it is not required by law, but in those circumstances, we will still respond to notify you of such a decision. In some cases, we may also need you to provide us with additional information, which may include Personal Data, if necessary to verify your identity and the nature of your request.</p>
+            <p>You have certain rights with respect to your Personal Data, including those set forth below. For more information about these rights, or to submit a request, please email us at hello@aerocall.net. Please note that in some circumstances, we may not be able to fully comply with your request, such as if it is frivolous or extremely impractical, if it jeopardizes the rights of others, or if it is not required by law, but in those circumstances, we will still respond to notify you of such a decision. In some cases, we may also need you to provide us with additional information, which may include Personal Data, if necessary to verify your identity and the nature of your request.</p>
             <ul>
                 <li><strong>Access:</strong> You can request more information about the Personal Data we hold about you and request a copy of such Personal Data. You can also access certain of your Personal Data by logging on to your account.</li>
-                <li><strong>Rectification:</strong> If you believe that any Personal Data we are holding about you is incorrect or incomplete, you can request that we correct or supplement such data. You can also correct some of this information directly by emailing hello@aerocall.com.</li>
+                <li><strong>Rectification:</strong> If you believe that any Personal Data we are holding about you is incorrect or incomplete, you can request that we correct or supplement such data. You can also correct some of this information directly by emailing hello@aerocall.net.</li>
                 <li><strong>Erasure:</strong> You can request that we erase some or all of your Personal Data from our systems.</li>
                 <li><strong>Withdrawal of Consent:</strong> If we are processing your Personal Data based on your consent (as indicated at the time of collection of such data), you have the right to withdraw your consent at any time. Please note, however, that if you exercise this right, you may have to then provide express consent on a case-by-case basis for the use or disclosure of certain of your Personal Data, if such use or disclosure is necessary to enable you to utilize some or all of our Services.</li>
                 <li><strong>Portability:</strong> You can ask for a copy of your Personal Data in a machine-readable format. You can also request that we transmit the data to another controller where technically feasible.</li>
@@ -337,7 +337,7 @@ export default function PrivacyPolicyPage() {
             <h2>22. Contact Information</h2>
             <p>If you have any questions or comments about this Privacy Policy, the ways in which we collect and use your Personal Data or your choices and rights regarding such collection and use, please do not hesitate to contact us at:</p>
             <ul>
-                <li>By email: hello@aerocall.com</li>
+                <li>By email: hello@aerocall.net</li>
             </ul>
           </div>
         </div>
