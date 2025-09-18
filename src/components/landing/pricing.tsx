@@ -92,10 +92,10 @@ export function Pricing() {
                             </ul>
                         </CardContent>
                         <CardFooter>
-                            <Button asChild className="w-full" variant={tier.isPopular ? "default" : "outline"}>
+                            <Button asChild className="w-full group" variant={tier.isPopular ? "default" : "outline"}>
                                 <Link href={tier.buttonLink}>
                                     {tier.buttonText}
-                                    <ArrowRight className="ml-2 h-4 w-4" />
+                                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                                 </Link>
                             </Button>
                         </CardFooter>
