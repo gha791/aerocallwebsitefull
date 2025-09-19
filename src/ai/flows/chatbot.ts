@@ -11,7 +11,7 @@
 
 import {ai} from '@/ai/genkit';
 import {z} from 'genkit';
-import { createLead, Lead } from '@/services/leads';
+import { createLead } from '@/services/leads';
 
 // Define the tool for saving lead information.
 const saveLeadTool = ai.defineTool(
@@ -27,11 +27,7 @@ const saveLeadTool = ai.defineTool(
       outputSchema: z.string(),
     },
     async (input) => {
-        const lead: Omit<Lead, 'createdAt'> = {
-            ...input,
-            source: 'Chatbot'
-        };
-        const result = await createLead(lead);
+        const result = await createLead({ ...input, source: 'Chatbot' });
         if (result.success) {
             return `Successfully saved lead with ID: ${result.id}`;
         } else {

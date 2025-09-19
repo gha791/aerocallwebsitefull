@@ -2,7 +2,7 @@
 'use server';
 
 import { db } from '@/lib/firebase';
-import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { collection, addDoc, serverTimestamp, Timestamp } from 'firebase/firestore';
 
 export interface Lead {
   firstName: string;
@@ -15,6 +15,7 @@ export interface Lead {
   discussionTopic?: string;
   message?: string;
   source: 'Contact Form' | 'Chatbot';
+  createdAt: Timestamp;
 }
 
 export async function createLead(lead: Omit<Lead, 'createdAt'>) {
@@ -26,6 +27,7 @@ export async function createLead(lead: Omit<Lead, 'createdAt'>) {
     return { success: true, id: docRef.id };
   } catch (error) {
     console.error("Error adding document: ", error);
-    return { success: false, error: "Failed to create lead." };
+    const errorMessage = error instanceof Error ? error.message : "An unknown error occurred.";
+    return { success: false, error: `Failed to create lead: ${errorMessage}` };
   }
 }
