@@ -60,7 +60,7 @@ export function ContactRatings() {
                         </div>
                         <h2 className="text-3xl font-bold">Rated the best business phone</h2>
                         <p className="text-muted-foreground">
-                            With an average 4.7 stars and over 2,900 reviews, AEROCALL is the #1 business phone in customer satisfaction on G2.
+                            With an average 4.7 stars and over 2,900 reviews, Connectify is the #1 business phone in customer satisfaction on G2.
                         </p>
                         <div className="space-y-2">
                             <p className="text-sm font-semibold">Trusted by 60,000+ businesses</p>

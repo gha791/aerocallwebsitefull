@@ -13,9 +13,14 @@ type Message = {
     content: string;
 };
 
+const defaultWelcomeMessage: Message = {
+    role: 'model',
+    content: "Welcome to Connectify! Before we get started, could you please tell me your first name?"
+};
+
 export function ChatWidget() {
     const [isOpen, setIsOpen] = useState(false);
-    const [messages, setMessages] = useState<Message[]>([]);
+    const [messages, setMessages] = useState<Message[]>([defaultWelcomeMessage]);
     const [input, setInput] = useState("");
     const [isLoading, setIsLoading] = useState(false);
     const messagesEndRef = useRef<HTMLDivElement | null>(null);
@@ -53,6 +58,13 @@ export function ChatWidget() {
             setIsLoading(false);
         }
     };
+    
+    const handleOpen = () => {
+        setIsOpen(true);
+        if(messages.length === 0) {
+            setMessages([defaultWelcomeMessage]);
+        }
+    }
 
     return (
         <div className="fixed bottom-4 right-4 z-50">
@@ -63,7 +75,7 @@ export function ChatWidget() {
                              <div className="bg-primary p-2 rounded-full">
                                 <Bot className="h-6 w-6 text-primary-foreground" />
                             </div>
-                            <CardTitle className="text-lg">AEROCALL Assistant</CardTitle>
+                            <CardTitle className="text-lg">Connectify Assistant</CardTitle>
                         </div>
                         <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)}>
                             <X className="h-5 w-5" />
@@ -120,7 +132,7 @@ export function ChatWidget() {
                 <Button
                     size="lg"
                     className="rounded-full w-16 h-16 shadow-lg"
-                    onClick={() => setIsOpen(true)}
+                    onClick={handleOpen}
                 >
                     <MessageSquare className="h-8 w-8" />
                 </Button>

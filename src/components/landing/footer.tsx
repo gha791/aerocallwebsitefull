@@ -83,17 +83,17 @@ export function Footer() {
                 <ul className="space-y-3 text-sm">
                     <li className="flex items-center gap-3">
                         <PhoneIcon className="h-5 w-5 text-muted-foreground" />
-                        <a href="tel:1-800-AEROCALL" className="text-muted-foreground hover:text-foreground">1-800-AEROCALL</a>
+                        <a href="tel:1-800-CONNECT" className="text-muted-foreground hover:text-foreground">1-800-CONNECT</a>
                     </li>
                     <li className="flex items-center gap-3">
                         <Mail className="h-5 w-5 text-muted-foreground" />
-                        <a href="mailto:hello@aerocall.net" className="text-muted-foreground hover:text-foreground">hello@aerocall.net</a>
+                        <a href="mailto:hello@connectify.net" className="text-muted-foreground hover:text-foreground">hello@connectify.net</a>
                     </li>
                     <li className="flex items-start gap-3">
                         <MapPin className="h-5 w-5 text-muted-foreground mt-1" />
                         <p className="text-muted-foreground">
-                            8206 LOUSISIANA BLVD NE<br/>
-                            STE A ALBUQUERQUE, NM 87113
+                            8206 Louisiana Blvd NE<br/>
+                            Ste A Albuquerque, NM 87113
                         </p>
                     </li>
                 </ul>
@@ -101,7 +101,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-sm text-muted-foreground">&copy; 2025 AEROCALL. All rights reserved.</p>
+            <p className="text-sm text-muted-foreground">&copy; 2025 Connectify. All rights reserved.</p>
             <div className="flex gap-4">
                 <Link href="/privacy" className="text-sm text-muted-foreground hover:underline underline-offset-4">Privacy Policy</Link>
                 <Link href="/terms" className="text-sm text-muted-foreground hover:underline underline-offset-4">Terms of Service</Link>

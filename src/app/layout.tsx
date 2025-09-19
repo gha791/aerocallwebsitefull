@@ -6,7 +6,7 @@ import { Footer } from '@/components/landing/footer';
 import { ChatWidget } from '@/components/chatbot/chat-widget';
 
 export const metadata: Metadata = {
-  title: 'AEROCALL',
+  title: 'Connectify',
   description: 'The future of business communication.',
 };
 
@@ -38,3 +38,4 @@ export default function RootLayout({
       </body>
     </html>
   );
+}

@@ -11,7 +11,7 @@ import Link from "next/link";
 import { ContactRatings } from "@/components/landing/contact-ratings";
 
 const benefits = [
-    "Evaluate AEROCALL for your organization",
+    "Evaluate Connectify for your organization",
     "Request a demo",
     "Learn which plan is best for your team",
 ]
@@ -77,7 +77,7 @@ export default function ContactPage() {
                   <Input id="website" placeholder="Enter your website URL" />
                 </div>
                 <div className="space-y-2 md:col-span-2">
-                    <Label htmlFor="users">How many users will you need on AEROCALL?*</Label>
+                    <Label htmlFor="users">How many users will you need on Connectify?*</Label>
                     <Select>
                         <SelectTrigger id="users">
                             <SelectValue placeholder="Select..." />
@@ -98,7 +98,7 @@ export default function ContactPage() {
                             <SelectValue placeholder="Select..." />
                         </SelectTrigger>
                         <SelectContent>
-                            <SelectItem value="evaluate">Evaluating AEROCALL for my team</SelectItem>
+                            <SelectItem value="evaluate">Evaluating Connectify for my team</SelectItem>
                             <SelectItem value="demo">Request a demo</SelectItem>
                             <SelectItem value="pricing">Pricing questions</SelectItem>
                             <SelectItem value="other">Other</SelectItem>
@@ -107,7 +107,7 @@ export default function ContactPage() {
                 </div>
                  <div className="space-y-2 md:col-span-2">
                   <Label htmlFor="message">How can our Sales team help?</Label>
-                  <Textarea id="message" placeholder="I'm interested in AEROCALL, I would like to learn more about..." className="min-h-[120px]" />
+                  <Textarea id="message" placeholder="I'm interested in Connectify, I would like to learn more about..." className="min-h-[120px]" />
                 </div>
                 <Button type="submit" className="w-full md:col-span-2" size="lg">Submit</Button>
               </form>

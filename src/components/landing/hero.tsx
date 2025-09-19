@@ -19,7 +19,7 @@ export function Hero() {
           <span className="text-accent">Crystal Clear</span>
         </h1>
         <p className="max-w-[700px] mx-auto text-muted-foreground md:text-xl mt-6">
-            Modern cloud calling for ambitious teams. Simple setup, powerful features, and unparalleled reliability. Welcome to AEROCALL.
+            Modern cloud calling for ambitious teams. Simple setup, powerful features, and unparalleled reliability. Welcome to Connectify.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
             <Button size="lg" asChild><Link href="/contact">Start Free Trial</Link></Button>
