@@ -6,7 +6,7 @@ import { Footer } from '@/components/landing/footer';
 import { ChatWidget } from '@/components/chatbot/chat-widget';
 
 export const metadata: Metadata = {
-  title: 'Connectify',
+  title: 'AEROCALL',
   description: 'The future of business communication.',
 };
 

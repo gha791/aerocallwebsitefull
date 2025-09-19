@@ -1,7 +1,7 @@
 'use server';
 
 /**
- * @fileOverview A chatbot AI agent for Connectify.
+ * @fileOverview A chatbot AI agent for AEROCALL.
  *
  * - chat - A function that handles the chatbot conversation.
  * - ChatInput - The input type for the chat function.
@@ -33,9 +33,9 @@ const chatPrompt = ai.definePrompt({
   name: 'chatbotPrompt',
   input: {schema: ChatInputSchema},
   output: {schema: ChatOutputSchema},
-  prompt: `You are a friendly and professional customer support agent for Connectify, a company that provides modern cloud calling solutions for businesses.
+  prompt: `You are a friendly and professional customer support agent for AEROCALL, a company that provides modern cloud calling solutions for businesses.
 
-Your primary goal is to answer user questions about Connectify's services, features, and pricing.
+Your primary goal is to answer user questions about AEROCALL's services, features, and pricing.
 
 However, before you answer their questions, you must first collect the following information from the user in a professional and conversational manner:
 1. First Name
@@ -51,7 +51,7 @@ If the user asks a question before all information is collected, politely steer 
 
 Once all four pieces of information are collected, you can proceed to answer the user's questions.
 
-Here is some information about Connectify:
+Here is some information about AEROCALL:
 - Tagline: The Future of Business Communication is Crystal Clear.
 - Services: Cloud calling, team collaboration, call analytics, number porting, 24/7 support.
 - Key Features: Crystal clear HD voice calls, team conference calls, call forwarding, advanced analytics, CRM integration, enterprise-grade security.

@@ -37,7 +37,7 @@ export default function AboutPage() {
             <section className="py-20 md:py-32">
                 <div className="container mx-auto text-center">
                     <h1 className="text-4xl md:text-6xl font-bold tracking-tighter">We're here to help people and their businesses grow.</h1>
-                    <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">Connectify is the modern business phone for today's work. We are on a mission to make it easy for businesses to build better relationships and communicate more effectively, from anywhere.</p>
+                    <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">AEROCALL is the modern business phone for today's work. We are on a mission to make it easy for businesses to build better relationships and communicate more effectively, from anywhere.</p>
                     <div className="mt-8">
                         <Button size="lg" asChild>
                             <Link href="/contact">See open positions</Link>

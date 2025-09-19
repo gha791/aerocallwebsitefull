@@ -10,7 +10,7 @@ export default function SignupPage() {
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
           <CardTitle className="text-2xl">Sign Up</CardTitle>
-          <CardDescription>Create an account to get started with Connectify.</CardDescription>
+          <CardDescription>Create an account to get started with AEROCALL.</CardDescription>
         </CardHeader>
         <CardContent>
           <form className="space-y-4">

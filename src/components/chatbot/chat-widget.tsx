@@ -15,7 +15,7 @@ type Message = {
 
 const defaultWelcomeMessage: Message = {
     role: 'model',
-    content: "Welcome to Connectify! Before we get started, could you please tell me your first name?"
+    content: "Welcome to AEROCALL! Before we get started, could you please tell me your first name?"
 };
 
 export function ChatWidget() {
@@ -75,7 +75,7 @@ export function ChatWidget() {
                              <div className="bg-primary p-2 rounded-full">
                                 <Bot className="h-6 w-6 text-primary-foreground" />
                             </div>
-                            <CardTitle className="text-lg">Connectify Assistant</CardTitle>
+                            <CardTitle className="text-lg">AEROCALL Assistant</CardTitle>
                         </div>
                         <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)}>
                             <X className="h-5 w-5" />

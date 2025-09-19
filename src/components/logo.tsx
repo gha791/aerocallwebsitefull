@@ -8,7 +8,7 @@ export function Logo({ className }: { className?: string }) {
         <Phone className="text-primary-foreground" />
       </div>
       <h1 className="text-2xl font-bold text-foreground">
-        Connectify
+        AEROCALL
       </h1>
     </div>
   );
