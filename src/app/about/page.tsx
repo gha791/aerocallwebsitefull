@@ -44,17 +44,43 @@ export default function AboutPage() {
                 <div className="container mx-auto text-center">
                     <h1 className="text-4xl md:text-6xl font-bold tracking-tighter">We're here to help people and their businesses grow.</h1>
                     <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">AEROCALL is the modern business phone for today's work. We are on a mission to make it easy for businesses to build better relationships and communicate more effectively, from anywhere.</p>
-                    <div className="mt-8">
-                        <Button size="lg" asChild>
-                            <Link href="/contact">See open positions</Link>
-                        </Button>
+                </div>
+            </section>
+
+             {/* Our Story Section */}
+            <section className="py-20">
+                <div className="container mx-auto">
+                    <div className="text-center max-w-3xl mx-auto space-y-6">
+                        <h2 className="text-3xl md:text-4xl font-bold">Our Story</h2>
+                        <p className="text-muted-foreground md:text-lg">
+                            We started AEROCALL because we were frustrated with expensive, complicated phone systems that only big companies could afford. Every small business deserves access to professional communication tools.
+                        </p>
+                        <p className="text-muted-foreground md:text-lg">
+                            Our team has experience building communication platforms, but we wanted to do things differently. Instead of adding complexity, we focused on simplicity. Instead of hidden fees, we chose transparency.
+                        </p>
+                        <p className="text-muted-foreground md:text-lg">
+                            We're building AEROCALL to be the communication platform we always wished existed - powerful enough for enterprises, simple enough for startups, and affordable for everyone in between.
+                        </p>
                     </div>
                 </div>
             </section>
 
+            {/* Our Mission Section */}
+            <section className="py-20 bg-secondary">
+                <div className="container mx-auto">
+                    <div className="text-center max-w-3xl mx-auto space-y-6">
+                        <h2 className="text-3xl md:text-4xl font-bold">Our Mission</h2>
+                        <p className="text-muted-foreground md:text-lg">
+                            To make professional communication simple, affordable, and accessible to businesses of all sizes. We believe every company deserves the tools to communicate effectively, without the complexity or cost that traditionally comes with enterprise solutions.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+
             {/* Team Image Section */}
             {teamImage && (
-                <section className="container mx-auto mb-20 md:mb-32">
+                <section className="container mx-auto my-20 md:my-32">
                      <Image
                         src={teamImage.imageUrl}
                         alt={teamImage.description}
