@@ -6,8 +6,12 @@ import { Footer } from '@/components/landing/footer';
 import { ChatWidget } from '@/components/chatbot/chat-widget';
 
 export const metadata: Metadata = {
-  title: 'AEROCALL',
-  description: 'The future of business communication.',
+  title: {
+    template: '%s | AEROCALL',
+    default: 'AEROCALL | The Future of Business Communication',
+  },
+  description: 'AEROCALL offers modern cloud calling for ambitious teams. Simple setup, powerful features, and unparalleled reliability. Serving USA & Canada with seamless connections.',
+  keywords: ['business phone system', 'cloud calling', 'VoIP', 'team communication', 'small business phone'],
 };
 
 export default function RootLayout({

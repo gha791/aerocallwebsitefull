@@ -1,3 +1,9 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Terms of Service",
+};
+
 export default function TermsOfServicePage() {
     return (
       <main className="flex-1 py-12 md:py-24 lg:py-32">

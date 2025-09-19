@@ -60,11 +60,11 @@ export function Pricing() {
     <section id="pricing" className="py-12 md:py-24 lg:py-32">
         <div className="container mx-auto px-4 md:px-6">
             <div className="text-center space-y-4 mb-12">
-                <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+                <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
                     Simple, Transparent Pricing
                     <br />
                     for <span className="text-accent">Every Business</span>
-                </h2>
+                </h1>
                 <p className="text-muted-foreground md:text-lg max-w-2xl mx-auto">
                     Choose the plan that fits your needs. No hidden fees, no surprises.
                 </p>

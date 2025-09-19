@@ -17,6 +17,14 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { submitContactForm } from "./actions";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
+import type { Metadata } from "next";
+
+// Note: Metadata can't be exported from client components. 
+// This is here for reference. For it to work, this would need to be a server component.
+// export const metadata: Metadata = {
+//   title: "Contact Sales",
+//   description: "Get in touch with the AEROCALL sales team to request a demo, evaluate our platform, or get pricing information.",
+// };
 
 const benefits = [
     "Evaluate AEROCALL for your organization",

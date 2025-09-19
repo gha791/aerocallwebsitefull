@@ -3,8 +3,14 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { placeholderImages } from "@/lib/placeholder-images";
 import { Briefcase, Heart, Lightbulb, Users } from "lucide-react";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+    title: "About Us",
+    description: "Learn about the mission, values, and team behind AEROCALL. We're here to help businesses grow with better communication.",
+};
 
 const values = [
     {
