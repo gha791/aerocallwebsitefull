@@ -238,7 +238,7 @@ export default function ContactPage() {
                           <FormControl>
                             <SelectTrigger>
                               <SelectValue placeholder="Select..." />
-                            </Trigger>
+                            </SelectTrigger>
                           </FormControl>
                           <SelectContent>
                             <SelectItem value="evaluate">Evaluating AEROCALL for my team</SelectItem>
