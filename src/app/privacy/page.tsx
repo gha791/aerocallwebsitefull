@@ -10,7 +10,7 @@ export default function PrivacyPolicyPage() {
               At Connectify, we take your privacy seriously. Please read this Privacy Policy to learn how we treat your personal data. By using or accessing our Services in any manner, you acknowledge that you accept the practices and policies outlined below, and you hereby consent that we will collect, use and share your information as described in this Privacy Policy.
             </p>
             <p>
-              Remember that your use of Connectify&apos;s Services is at all times subject to our Terms of Service which incorporates this Privacy Policy. Any terms we use in this Policy without defining them have the definitions given to them in the Terms of Use.
+              Remember that your use of Connectify's Services is at all times subject to our Terms of Service which incorporates this Privacy Policy. Any terms we use in this Policy without defining them have the definitions given to them in the Terms of Use.
             </p>
             <p>
               If you have a disability, you may access this Privacy Policy in an alternative format by contacting hello@connectify.net.
@@ -325,7 +325,7 @@ export default function PrivacyPolicyPage() {
                 <li><strong>Portability:</strong> You can ask for a copy of your Personal Data in a machine-readable format. You can also request that we transmit the data to another controller where technically feasible.</li>
                 <li><strong>Objection:</strong> You can contact us to let us know that you object to the further use or disclosure of your Personal Data for certain purposes, such as for direct marketing purposes.</li>
                 <li><strong>Restriction of Processing:</strong> You can ask us to restrict further processing of your Personal Data.</li>
-                <li><strong>Right to File Complaint:</strong> You have the right to lodge a complaint about Connectify&apos;s practices with respect to your Personal Data with the supervisory authority of your country or EU Member State. A list of Supervisory Authorities is available here: https://edpb.europa.eu/about-edpb/board/members_en.</li>
+                <li><strong>Right to File Complaint:</strong> You have the right to lodge a complaint about Connectify's practices with respect to your Personal Data with the supervisory authority of your country or EU Member State. A list of Supervisory Authorities is available here: https://edpb.europa.eu/about-edpb/board/members_en.</li>
             </ul>
 
             <h2>20. Transfers of Personal Data</h2>
