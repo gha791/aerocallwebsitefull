@@ -28,7 +28,7 @@ export function Header() {
           </nav>
           <div className="flex items-center gap-2">
               <Button asChild><Link href="/contact">Get Started</Link></Button>
-              <Button variant="outline" asChild className="hidden md:flex"><Link href="/login">Log In</Link></Button>
+              <Button variant="outline" asChild className="hidden md:flex"><Link href="https://app.aerocall.net/login" target="_blank">Log In</Link></Button>
               <Sheet open={isOpen} onOpenChange={setIsOpen}>
                 <SheetTrigger asChild>
                     <Button variant="outline" size="icon" className="md:hidden">
@@ -51,9 +51,10 @@ export function Header() {
                                 </Link>
                             ))}
                              <Link
-                                href="/login"
+                                href="https://app.aerocall.net/login"
                                 className="text-lg font-medium hover:underline underline-offset-4"
                                 onClick={() => setIsOpen(false)}
+                                target="_blank"
                             >
                                 Log In
                             </Link>
