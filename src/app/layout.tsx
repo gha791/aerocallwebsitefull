@@ -32,9 +32,7 @@ export default function RootLayout({
       <body className="font-body antialiased bg-background text-foreground">
         <div className="flex flex-col min-h-screen">
           <Header />
-          <div className="flex-grow">
-            {children}
-          </div>
+          {children}
           <Footer />
         </div>
         <ChatWidget />
