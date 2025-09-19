@@ -1,3 +1,4 @@
+
 'use server';
 
 /**
@@ -10,6 +11,35 @@
 
 import {ai} from '@/ai/genkit';
 import {z} from 'genkit';
+import { createLead, Lead } from '@/services/leads';
+
+// Define the tool for saving lead information.
+const saveLeadTool = ai.defineTool(
+    {
+      name: 'saveLead',
+      description: 'Saves the collected lead information to the database.',
+      inputSchema: z.object({
+        firstName: z.string().describe("The user's first name."),
+        lastName: z.string().describe("The user's last name."),
+        companyName: z.string().describe("The user's company name."),
+        email: z.string().describe("The user's email address."),
+      }),
+      outputSchema: z.string(),
+    },
+    async (input) => {
+        const lead: Omit<Lead, 'createdAt'> = {
+            ...input,
+            source: 'Chatbot'
+        };
+        const result = await createLead(lead);
+        if (result.success) {
+            return `Successfully saved lead with ID: ${result.id}`;
+        } else {
+            return `Failed to save lead. Error: ${result.error}`;
+        }
+    }
+);
+
 
 const ChatInputSchema = z.object({
   message: z.string().describe('The user\'s message to the chatbot.'),
@@ -33,6 +63,7 @@ const chatPrompt = ai.definePrompt({
   name: 'chatbotPrompt',
   input: {schema: ChatInputSchema},
   output: {schema: ChatOutputSchema},
+  tools: [saveLeadTool],
   prompt: `You are a friendly and professional customer support agent for AEROCALL, a company that provides modern cloud calling solutions for businesses.
 
 Your primary goal is to answer user questions about AEROCALL's services, features, and pricing.
@@ -49,7 +80,7 @@ Review the conversation history to see what information has already been collect
 
 If the user asks a question before all information is collected, politely steer the conversation back to gathering the required details. For example: "I can definitely help with that. First, could you please provide me with [Missing Information] so I can better assist you?"
 
-Once all four pieces of information are collected, you can proceed to answer the user's questions.
+Once all four pieces of information (First Name, Last Name, Company Name, and Email) are collected, you MUST use the 'saveLead' tool to save the user's information. After using the tool, confirm to the user that their information has been saved and then proceed to answer their questions.
 
 Here is some information about AEROCALL:
 - Tagline: The Future of Business Communication is Crystal Clear.

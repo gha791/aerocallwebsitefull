@@ -1,4 +1,5 @@
 
+"use client";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -6,9 +7,16 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
-import { ArrowRight, CheckCircle } from "lucide-react";
+import { ArrowRight, CheckCircle, Loader2 } from "lucide-react";
 import Link from "next/link";
 import { ContactRatings } from "@/components/landing/contact-ratings";
+import { useForm, Controller } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { submitContactForm } from "./actions";
+import { useToast } from "@/hooks/use-toast";
+import { useState } from "react";
 
 const benefits = [
     "Evaluate AEROCALL for your organization",
@@ -16,7 +24,61 @@ const benefits = [
     "Learn which plan is best for your team",
 ]
 
+const contactFormSchema = z.object({
+  firstName: z.string().min(1, "First name is required"),
+  lastName: z.string().min(1, "Last name is required"),
+  email: z.string().email("Invalid email address"),
+  callbackNumber: z.string().optional(),
+  countryCode: z.string().optional(),
+  companyName: z.string().min(1, "Company name is required"),
+  website: z.string().url("Invalid website URL").optional().or(z.literal('')),
+  users: z.string().min(1, "Please select the number of users"),
+  discussionTopic: z.string().min(1, "Please select a topic"),
+  message: z.string().optional(),
+});
+
+export type ContactFormValues = z.infer<typeof contactFormSchema>;
+
 export default function ContactPage() {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const form = useForm<ContactFormValues>({
+    resolver: zodResolver(contactFormSchema),
+    defaultValues: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      callbackNumber: "",
+      countryCode: "US",
+      companyName: "",
+      website: "",
+      users: "",
+      discussionTopic: "",
+      message: "",
+    },
+  });
+
+  async function onSubmit(values: ContactFormValues) {
+    setIsSubmitting(true);
+    const result = await submitContactForm(values);
+    setIsSubmitting(false);
+
+    if (result.success) {
+      toast({
+        title: "Form Submitted!",
+        description: "Thank you for contacting us. Our team will get back to you shortly.",
+      });
+      form.reset();
+    } else {
+      toast({
+        variant: "destructive",
+        title: "Submission Failed",
+        description: result.error,
+      });
+    }
+  }
+
   return (
     <main className="flex-1 py-12 md:py-24 lg:py-32 bg-secondary">
       <div className="container mx-auto px-4 md:px-6">
@@ -40,77 +102,165 @@ export default function ContactPage() {
             </div>
           <Card className="shadow-2xl">
             <CardContent className="p-8">
-              <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <Label htmlFor="first-name">First name*</Label>
-                  <Input id="first-name" placeholder="Enter your first name" />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="last-name">Last name*</Label>
-                  <Input id="last-name" placeholder="Enter your last name" />
-                </div>
-                <div className="space-y-2 md:col-span-2">
-                  <Label htmlFor="email">Email address*</Label>
-                  <Input id="email" type="email" placeholder="Enter your email" />
-                </div>
-                 <div className="space-y-2 md:col-span-2">
-                  <Label htmlFor="callback-number">Callback number*</Label>
-                  <div className="flex items-center gap-2">
-                    <Select defaultValue="US">
-                        <SelectTrigger className="w-[120px]">
-                            <SelectValue placeholder="Country" />
-                        </SelectTrigger>
-                        <SelectContent>
-                            <SelectItem value="US">🇺🇸 +1</SelectItem>
-                            <SelectItem value="CA">🇨🇦 +1</SelectItem>
-                        </SelectContent>
-                    </Select>
-                    <Input id="callback-number" placeholder="000 000 0000" />
+              <Form {...form}>
+                <form onSubmit={form.handleSubmit(onSubmit)} className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <FormField
+                    control={form.control}
+                    name="firstName"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>First name*</FormLabel>
+                        <FormControl>
+                          <Input placeholder="Enter your first name" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="lastName"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Last name*</FormLabel>
+                        <FormControl>
+                          <Input placeholder="Enter your last name" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem className="md:col-span-2">
+                        <FormLabel>Email address*</FormLabel>
+                        <FormControl>
+                          <Input type="email" placeholder="Enter your email" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <div className="space-y-2 md:col-span-2">
+                    <Label htmlFor="callback-number">Callback number</Label>
+                    <div className="flex items-center gap-2">
+                      <Controller
+                        control={form.control}
+                        name="countryCode"
+                        render={({ field }) => (
+                          <Select onValueChange={field.onChange} defaultValue={field.value}>
+                            <SelectTrigger className="w-[120px]">
+                              <SelectValue placeholder="Country" />
+                            </SelectTrigger>
+                            <SelectContent>
+                              <SelectItem value="US">🇺🇸 +1</SelectItem>
+                              <SelectItem value="CA">🇨🇦 +1</SelectItem>
+                            </SelectContent>
+                          </Select>
+                        )}
+                      />
+                      <Controller
+                        control={form.control}
+                        name="callbackNumber"
+                        render={({ field }) => (
+                          <Input id="callback-number" placeholder="000 000 0000" {...field} />
+                        )}
+                      />
+                    </div>
                   </div>
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="company-name">Company name*</Label>
-                  <Input id="company-name" placeholder="Where do you work?" />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="website">Website*</Label>
-                  <Input id="website" placeholder="Enter your website URL" />
-                </div>
-                <div className="space-y-2 md:col-span-2">
-                    <Label htmlFor="users">How many users will you need on AEROCALL?*</Label>
-                    <Select>
-                        <SelectTrigger id="users">
-                            <SelectValue placeholder="Select..." />
-                        </SelectTrigger>
-                        <SelectContent>
+                  <FormField
+                    control={form.control}
+                    name="companyName"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Company name*</FormLabel>
+                        <FormControl>
+                          <Input placeholder="Where do you work?" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="website"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Website</FormLabel>
+                        <FormControl>
+                          <Input placeholder="Enter your website URL" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="users"
+                    render={({ field }) => (
+                      <FormItem className="md:col-span-2">
+                        <FormLabel>How many users will you need on AEROCALL?*</FormLabel>
+                        <Select onValueChange={field.onChange} defaultValue={field.value}>
+                          <FormControl>
+                            <SelectTrigger>
+                              <SelectValue placeholder="Select..." />
+                            </SelectTrigger>
+                          </FormControl>
+                          <SelectContent>
                             <SelectItem value="1-5">1-5</SelectItem>
                             <SelectItem value="6-10">6-10</SelectItem>
                             <SelectItem value="11-25">11-25</SelectItem>
                             <SelectItem value="26-50">26-50</SelectItem>
                             <SelectItem value="51+">51+</SelectItem>
-                        </SelectContent>
-                    </Select>
-                </div>
-                <div className="space-y-2 md:col-span-2">
-                    <Label htmlFor="discuss">What would you like to discuss?*</Label>
-                    <Select>
-                        <SelectTrigger id="discuss">
-                            <SelectValue placeholder="Select..." />
-                        </SelectTrigger>
-                        <SelectContent>
+                          </SelectContent>
+                        </Select>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="discussionTopic"
+                    render={({ field }) => (
+                      <FormItem className="md:col-span-2">
+                        <FormLabel>What would you like to discuss?*</FormLabel>
+                         <Select onValueChange={field.onChange} defaultValue={field.value}>
+                          <FormControl>
+                            <SelectTrigger>
+                              <SelectValue placeholder="Select..." />
+                            </SelectTrigger>
+                          </FormControl>
+                          <SelectContent>
                             <SelectItem value="evaluate">Evaluating AEROCALL for my team</SelectItem>
                             <SelectItem value="demo">Request a demo</SelectItem>
                             <SelectItem value="pricing">Pricing questions</SelectItem>
                             <SelectItem value="other">Other</SelectItem>
-                        </SelectContent>
-                    </Select>
-                </div>
-                 <div className="space-y-2 md:col-span-2">
-                  <Label htmlFor="message">How can our Sales team help?</Label>
-                  <Textarea id="message" placeholder="I'm interested in AEROCALL, I would like to learn more about..." className="min-h-[120px]" />
-                </div>
-                <Button type="submit" className="w-full md:col-span-2" size="lg">Submit</Button>
-              </form>
+                          </SelectContent>
+                        </Select>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="message"
+                    render={({ field }) => (
+                      <FormItem className="md:col-span-2">
+                        <FormLabel>How can our Sales team help?</FormLabel>
+                        <FormControl>
+                          <Textarea placeholder="I'm interested in AEROCALL, I would like to learn more about..." className="min-h-[120px]" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <Button type="submit" className="w-full md:col-span-2" size="lg" disabled={isSubmitting}>
+                    {isSubmitting ? <Loader2 className="animate-spin" /> : "Submit"}
+                  </Button>
+                </form>
+              </Form>
             </CardContent>
           </Card>
         </div>
