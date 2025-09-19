@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { placeholderImages } from "@/lib/placeholder-images";
 import Image from "next/image";
@@ -13,7 +14,7 @@ const steps = [
     },
     {
         title: "Start Calling",
-        description: "Download our app on any device and start making and receiving calls instantly."
+        description: "Log in to your account from any device and start making and receiving calls instantly."
     }
 ]
 
