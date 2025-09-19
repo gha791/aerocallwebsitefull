@@ -3,18 +3,20 @@ import { initializeApp, getApps } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBk6iGUE-fw8NOFpUx_216L2_OXtcNHd-k",
-  authDomain: "dev-wed-10291.firebaseapp.com",
-  projectId: "dev-wed-10291",
-  storageBucket: "dev-wed-10291.appspot.com",
-  messagingSenderId: "560410052303",
-  appId: "1:560410052303:web:38b32c31e6268b8120c151"
+  apiKey: "AIzaSyBXZQcEAALFZTNnpl1W9VFMSGA55guhVHc",
+  authDomain: "globalflow-mc9l7.firebaseapp.com",
+  projectId: "globalflow-mc9l7",
+  storageBucket: "globalflow-mc9l7.appspot.com",
+  messagingSenderId: "324267415379",
+  appId: "1:324267415379:web:739e0e1bf183fbd9f8f3a6"
 };
 
 // Initialize Firebase
 let app;
 if (!getApps().length) {
   app = initializeApp(firebaseConfig);
+} else {
+  app = getApps()[0];
 }
 
 const db = getFirestore(app);
