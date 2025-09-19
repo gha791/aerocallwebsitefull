@@ -70,7 +70,7 @@ function Title3D() {
 
 export default function HomePage() {
   return (
-    <main className="flex-1 h-[calc(100vh-150px)]">
+    <main className="flex-1 h-screen">
       <Canvas camera={{ position: [0, 0, 5] }}>
         <ambientLight intensity={0.8} />
         <directionalLight position={[5, 5, 5]} intensity={1} />
