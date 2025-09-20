@@ -105,6 +105,7 @@ export function Footer() {
             <div className="flex gap-4">
                 <Link href="/privacy" className="text-sm text-muted-foreground hover:underline underline-offset-4">Privacy Policy</Link>
                 <Link href="/terms" className="text-sm text-muted-foreground hover:underline underline-offset-4">Terms of Service</Link>
+                <Link href="/refund-policy" className="text-sm text-muted-foreground hover:underline underline-offset-4">Refund Policy</Link>
             </div>
         </div>
       </div>
